@@ -3,7 +3,7 @@ import  ast
 
 root = Tk()
 i = 0
-
+# global variable
 
 def get_number(num):
     global i
@@ -78,3 +78,5 @@ Button(root,text='<-',width=2,height=1,command=clear_one).grid(row=5,column=5)
 
 # button.grid(row)
 root.mainloop()
+message = "Calculetor closed"
+print(message)
