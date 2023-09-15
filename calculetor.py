@@ -23,15 +23,26 @@ def clear_all():
 
 
 def clear_one():
-    entire_string = display.get()
-    if len(entire_string):
-        new_string = entire_string[:-1]
-        clear_all()
-        display.insert(0,new_string)
-    else:
-        clear_all()
-        # insert empty string
-        display.insert(0,"")
+    ##option 1
+    # entire_string = display.get()
+    # if len(entire_string):
+    #     new_string = entire_string[:-1]
+    #     clear_all()
+    #     display.insert(0,new_string)
+    # else:
+    #     clear_all()
+    #     # insert empty string
+    #     display.insert(0,"")
+
+    #option 2
+    new_str = display.get()
+    new_list = list(new_str)
+    lengths = len(new_list)
+    new_str = ""
+    for i in range(lengths - 1):
+        new_str += new_list[i]
+    clear_all()
+    display.insert(0, new_str)
 
 
 def calculetor():
@@ -76,7 +87,5 @@ Button(root,text="AC",width=2,height=1,command=clear_all).grid(row=5,column=0)
 Button(root,text="=",width=2,height=1,command=calculetor).grid(row=5,column=2)
 Button(root,text='<-',width=2,height=1,command=clear_one).grid(row=5,column=5)
 
-# button.grid(row)
 root.mainloop()
-message = "Calculetor closed"
-print(message)
+# button.grid(row)
