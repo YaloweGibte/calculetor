@@ -89,3 +89,4 @@ Button(root,text='<-',width=2,height=1,command=clear_one).grid(row=5,column=5)
 
 root.mainloop()
 # button.grid(row)
+print("test")
